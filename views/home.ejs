@@ -1,0 +1,14 @@
+<form action="/file/upload" method="post" enctype="multipart/form-data">
+    <input type="file" accept=".csv" name="uploaded_file" placeholder="Upload CSV File...">
+    <button type="submit" class="submit-button"><i class="fas fa-upload"></i></button>
+</form>
+
+<div id="files-container">
+    <% for(let i=0;i<file_list.length;i++){ %>
+        <div class="file">
+            <div class="file-name"><i class="fas fa-file"></i> <%=file_list[i].substring(0,12) %></div>
+            <div class="file-open-button"><a href="/file/open/?id=<%= i %>">OPEN</a></abbr></div>
+            <a href="/file/delete/?index=<%= i %>"><i class="fas fa-trash"></i></a>
+        </div>
+    <% } %>
+</div>

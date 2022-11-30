@@ -1,0 +1,10 @@
+
+
+    <% for(jsonObj of jsonData){ %>  
+        <tr class="row-data">
+            <%   for (const property in jsonObj) { %>
+                <!-- <%  console.log(`${property}: ${jsonObj[property]}`) %> -->
+                <td><%= jsonObj[property] %></th>
+            <% } %>
+            </tr>
+    <% } %>     
